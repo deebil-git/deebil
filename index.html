@@ -1,76 +1,434 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="">
-  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-  <meta name="generator" content="Hugo 0.98.0">
-  <title>Deebil - Digital Brother</title>
-
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-  <link href="style.css" rel="stylesheet">
-</head>
-
-<body>
-
-  <div class="col-lg-8 mx-auto p-3 py-md-5">
-    <header class="d-flex align-items-center pb-3 mb-5 border-bottom">
-      <a href="#" class="d-flex align-items-center text-dark text-decoration-none">
-        <img src="logo.png" width="100">
-        <title>Deebil</title>
-        <path fill-rule="evenodd" clip-rule="evenodd"
-          d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z"
-          fill="currentColor"></path>
-        </svg>
-        <span class="fs-4">Deebil</span>
-      </a>
-    </header>
-
-    <main>
-      <h1>Site is under construction</h1>
-      <p class="fs-5 col-md-8">For support and services, please contact <a
-          href="mailto:info@deebil.com">info@deebil.com</a>
-      </p>
-
-      <div class="mb-5">
-        <a href="https://api.whatsapp.com/send/?phone=0918289999911" class="btn btn-success btn-lg px-4">Whatsapp</a>
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Deebil</title>
+      <meta name="keywords" content="Digital Solutions, Web Development, Data Analytics, Digital Marketing, Email Management, Automation Services, Website Design, Customized Strategies, International Scale, Innovative Solutions, Collaborative Approach, Cutting-edge Expertise, Unlocking Business Potential, Tailor-made Strategies, Client-Centric Solutions">
+      <meta name="description" content="Deebil is an innovative digital solutions provider specializing in web development, data analytics, and digital marketing services. We offer customized strategies backed by cutting-edge expertise to unlock your business's true potential in the digital realm. Contact us today for client-centric solutions.">
+      <meta name="author" content="">
+      <!-- owl carousel style -->
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.2.4/assets/owl.carousel.min.css" />
+      <!-- bootstrap css -->
+      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+      <!-- style css -->
+      <!-- Responsive-->
+      <link rel="stylesheet" href="css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <!-- owl stylesheets --> 
+      <link rel="stylesheet" href="css/owl.carousel.min.css">
+      <link rel="stylesheet" href="css/owl.theme.default.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"><link rel="stylesheet" href="./style.css">
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      
+   </head>
+   <body>
+      <div class="whats-float">
+         <a href=""
+            target="_blank">
+             <i class="fa fa-whatsapp"></i><span>WhatsApp<br><small>+23456</small></span>
+         </a>
+     </div>
+      <!--header section start -->
+      <div class="header_section">
+         <div class="container">
+            <nav class="navbar navbar-dark bg-dark">
+               <a class="logo" href="index.html"><img src="images/logo.svg"></a>
+               <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+               </button>
+               <div class="collapse navbar-collapse" id="navbarsExample01">
+                  <ul class="navbar-nav mr-auto">
+                     <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="client.html">Client</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                     </li>
+                  </ul>
+               </div> -->
+            </nav>
+         </div>
+         <!--banner section start -->
+         <div class="banner_section layout_padding">
+            <div id="my_slider" class="carousel slide" data-ride="carousel">
+               <div class="carousel-inner">
+                  <div class="carousel-item active">
+                     <div class="container">
+                        <div class="row">
+                           <div class="col-md-6">
+                              <div class="taital_main">
+                                 <h4 class="banner_taital">Web Development</h4>
+                                 <p class="banner_text">Unlock Your Digital Potential with Cutting-Edge Web Development Solutions</p>
+                                 <!-- <div class="read_bt"><a href="#">Read More</a></div> -->
+                              </div>
+                           </div>
+                           <div class="col-md-6">
+                              <!-- <div><img src="images/img-1.png" class="image_1"></div> -->
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="carousel-item">
+                     <div class="container">
+                        <div class="row">
+                           <div class="col-md-6">
+                              <div class="taital_main">
+                                 <h4 class="banner_taital">Data Analysis</h4>
+                                 <p class="banner_text">Powerful Insights at Your Fingertips: Discover the True Potential of Data Analysis</p>
+                                 <!-- <div class="read_bt"><a href="#">Read More</a></div> -->
+                              </div>
+                           </div>
+                           <div class="col-md-6">
+                              <!-- <div><img src="images/img-1.png" class="image_1"></div> -->
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="carousel-item">
+                     <div class="container">
+                        <div class="row">
+                           <div class="col-md-6">
+                              <div class="taital_main">
+                                 <h4 class="banner_taital">Digital Marketing</h4>
+                                 <p class="banner_text">Dominate the Digital Landscape: Elevate Your Business with Expert Digital Marketing Strategies</p>
+                                 <!-- <div class="read_bt"><a href="#">Read More</a></div> -->
+                              </div>
+                           </div>
+                           <div class="col-md-6">
+                              <!-- <div><img src="images/img-1.png" class="image_1"></div> -->
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <a class="carousel-control-prev" href="#my_slider" role="button" data-slide="prev">
+               <i class=""><img src="images/left-icon.png"></i>
+               </a>
+               <a class="carousel-control-next" href="#my_slider" role="button" data-slide="next">
+               <i class=""><img src="images/right-icon.png"></i>
+               </a>
+            </div>
+         </div>
+         <!--banner section end -->
       </div>
-
-      <hr class="col-3 col-md-2 mb-5">
-
-      <div class="row g-5">
-        <div class="col-md-6">
-          <h2>Services</h2>
-          <p>We provide services listed below:</p>
-          <ul class="icon-list ps-0">
-            <li class="d-flex align-items-start mb-1">
-              Data Analysis</a></li>
-            <li class="d-flex align-items-start mb-1">
-              Web Development</a></li>
-            <li class="d-flex align-items-start mb-1">
-              Mobile Application Development</a></li>
-            <li class="d-flex align-items-start mb-1">
-              Company Compliance Services</a></li>
-            <li class="d-flex align-items-start mb-1">
-              Company Incorporation</a></li>
-            <li class="text-muted d-flex align-items-start mb-1">Machine Learning and AI Projects</li>
-          </ul>
-        </div>
-
-        
+      <!--header section end -->
+      <!--about section start -->
+      <div class="about_section layout_padding">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-6">
+                  <div class="image_2"><img src="images/img-2.png"></div>
+               </div>
+               <div class="col-md-6">
+                  <h1 class="about_taital">About <span class="us_text">Us</span></h1>
+                  <p class="about_text">
+                     Welcome to Deebil, an innovative digital solutions provider established in 2022. We specialize in web development, data analysis, and digital marketing services, catering to clients on an international scale. With a collaborative approach, we craft tailor-made strategies backed by cutting-edge expertise. Let's join forces to unlock your business's true potential in the digital realm.
+ </p>
+                  <!-- <div class="read_bt_1"><a href="#">Read More</a></div> -->
+               </div>
+            </div>
+         </div>
       </div>
-    </main>
-    <footer class="pt-5 my-5 text-muted border-top">
-      Deebil &middot; &copy; 2022
-    </footer>
-  </div>
-
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-
-
-</body>
-
+      <!--about section end -->
+      <!--services section start -->
+      <!-- <div class="services_section layout_padding">
+         <div class="container">
+            <h1 class="service_taital"><span class="our_text">Our</span> Services</h1>
+            <p class="service_text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered </p>
+            <div class="services_section_2">
+               <div class="row">
+                  <div class="col-sm-4">
+                     <div class="icon_1"><img src="images/icon-1.png"></div>
+                     <h4 class="design_text">Logo Design</h4>
+                     <p class="lorem_text">Lorem ipsum dolor sit amet, consectetur adipiscing </p>
+                     <div class="icon_1"><img src="images/icon-2.png"></div>
+                     <h4 class="design_text">Web Development</h4>
+                     <p class="lorem_text">Lorem ipsum dolor sit amet, consectetur adipiscing </p>
+                  </div>
+                  <div class="col-sm-4">
+                     <div class="icon_3"><img src="images/icon-3.png"></div>
+                     <h4 class="design_text">Web Design</h4>
+                     <p class="lorem_text">Lorem ipsum dolor sit amet, consectetur adipiscing </p>
+                     <div class="read_bt_2"><a href="#">Read More</a></div>
+                  </div>
+                  <div class="col-sm-4">
+                     <div class="icon_1"><img src="images/icon-4.png"></div>
+                     <h4 class="design_text">Banner Design</h4>
+                     <p class="lorem_text">Lorem ipsum dolor sit amet, consectetur adipiscing </p>
+                     <div class="icon_1"><img src="images/icon-5.png"></div>
+                     <h4 class="design_text">Social Media Work</h4>
+                     <p class="lorem_text">Lorem ipsum dolor sit amet, consectetur adipiscing </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div> -->
+      <!--services section end -->
+      <!--blog section start -->
+      <!-- <div class="blog_section layout_padding">
+         <div class="container">
+            <h1 class="blog_taital"><span class="our_text">Our</span> Blog</h1>
+            <p class="blog_text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered </p>
+            <div class="services_section_2 layout_padding">
+               <div class="row">
+                  <div class="col-md-4">
+                     <div class="box_main">
+                        <div class="student_bg"><img src="images/img-3.png" class="student_bg"></div>
+                        <div class="image_15">19<br>Feb</div>
+                        <h4 class="hannery_text">There are many variations</h4>
+                        <p class="fact_text">dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud </p>
+                     </div>
+                  </div>
+                  <div class="col-md-4">
+                     <div class="box_main">
+                        <div class="student_bg"><img src="images/img-4.png" class="student_bg"></div>
+                        <div class="image_15">19<br>Feb</div>
+                        <h4 class="hannery_text">There are many variations</h4>
+                        <p class="fact_text">dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud </p>
+                     </div>
+                  </div>
+                  <div class="col-md-4">
+                     <div class="box_main">
+                        <div><img src="images/img-5.png" class="student_bg"></div>
+                        <div class="image_15">19<br>Feb</div>
+                        <h4 class="hannery_text">There are many variations</h4>
+                        <p class="fact_text">dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud </p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div> -->
+      <!--blog section end -->
+      <!--newsletter section start -->
+      <!-- <div class="newsletter_section">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-6">
+                  <h1 class="newsletter_text">Subscribe Now </h1>
+                  <p class="tempor_text">dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim </p>
+               </div>
+               <div class="col-md-6">
+                  <div class="mail_bt_main">
+                     <input type="text" class="mail_text" placeholder="Enter Tour Mail" name="Enter Tour Mail">
+                     <div class="subscribe_bt"><a href="#">SUBSCRIBE</a></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div> -->
+      <!--newsletter section end -->
+      <!--client section start -->
+      <div class="client_section layout_padding">
+         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+               <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+               <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+               <!-- <li data-target="#carouselExampleIndicators" data-slide-to="2"></li> -->
+            </ol>
+            <div class="carousel-inner">
+               <div class="carousel-item active">
+                  <div class="container">
+                     <h1 class="blog_taital"><span class="tes_text">Tes</span>timonial</h1>
+                     <div class="client_section_2 layout_padding">
+                        <div class="row">
+                           <div class="col-md-6">
+                              <div class="client_box active">
+                                 <div class="left_main">
+                                    <div class="image_6"><img src="images/yazim.png"></div>
+                                 </div>
+                                 <div class="right_main">
+                                    <h6 class="magna_text active">Yazim Khan</h6>
+                                    <p class="consectetur_text active">Combat Technical Services LLC, Dubai, UAE</p>
+                                    <div class="quote_icon active"></div>
+                                 </div>
+                                 <p class="ipsum_text active">Implementing document automation has revolutionized our workflow and boosted efficiency in our technical service company. Thanks to Deebil, we now save valuable time and resources, allowing us to focus more on delivering exceptional service to our clients. Highly recommended!</p>
+                              </div>
+                           </div>
+                           <div class="col-md-6">
+                              <div class="client_box">
+                                 <div class="left_main">
+                                    <div class="image_6"><img src="images/user.png"></div>
+                                 </div>
+                                 <div class="right_main">
+                                    <h6 class="magna_text">Sulaiman Rasheed</h6>
+                                    <p class="consectetur_text">Dense Technical Services LLC, Dubai, UAE</p>
+                                    <div class="quote_icon"></div>
+                                 </div>
+                                 <p class="ipsum_text">Managing our company's mail became a breeze with Deebil's exceptional mail management service. They seamlessly organized and streamlined our mail operations, saving us valuable time and ensuring efficient communication with our clients. Their solution has greatly improved our productivity and customer satisfaction. Thank you for the outstanding service!</p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="carousel-item">
+                  <div class="container">
+                     <h1 class="blog_taital"><span class="tes_text">Tes</span>timonial</h1>
+                     <div class="client_section_2 layout_padding">
+                        <div class="row">
+                           <div class="col-md-6">
+                              <div class="client_box active">
+                                 <div class="left_main">
+                                    <div class="image_6"><img src="images/user.png"></div>
+                                 </div>
+                                 <div class="right_main">
+                                    <h6 class="magna_text active">Sumesh Sudhakaran</h6>
+                                    <p class="consectetur_text active">Spano Fuels, Arjan, UAE</p>
+                                    <div class="quote_icon active"></div>
+                                 </div>
+                                 <p class="ipsum_text active">With Deebil's digital marketing expertise, our diesel supply business has reached new heights. Their strategic approach and targeted campaigns have significantly increased our online visibility, generating a steady flow of leads and conversions. Their knowledge of the diesel supply industry proved invaluable in delivering impactful results. Highly recommend their digital marketing services!</p>
+                              </div>
+                           </div>
+                           <div class="col-md-6">
+                              <div class="client_box">
+                                 <div class="left_main">
+                                    <div class="image_6"><img src="images/user.png"></div>
+                                 </div>
+                                 <div class="right_main">
+                                    <h6 class="magna_text">Sibi</h6>
+                                    <p class="consectetur_text">Trivandrum Homes Pvt. Ltd., Kerala, India</p>
+                                    <div class="quote_icon"></div>
+                                 </div>
+                                 <p class="ipsum_text">Thanks to Deebil's social media management service, our construction company has successfully built a strong online presence. They expertly crafted engaging content, increased our social media followers, and boosted our brand awareness. Their innovative strategies have generated valuable leads and enhanced our reputation in the industry. A remarkable partner for social media success!</p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- <div class="carousel-item">
+                  <div class="container">
+                     <h1 class="blog_taital"><span class="tes_text">Tes</span>timonial</h1>
+                     <div class="client_section_2 layout_padding">
+                        <div class="row">
+                           <div class="col-md-6">
+                              <div class="client_box active">
+                                 <div class="left_main">
+                                    <div class="image_6"><img src="images/user.png"></div>
+                                 </div>
+                                 <div class="right_main">
+                                    <h6 class="magna_text active">Magna</h6>
+                                    <p class="consectetur_text active">Consectetur adipiscing</p>
+                                    <div class="quote_icon active"></div>
+                                 </div>
+                                 <p class="ipsum_text active">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrudLorem ipsum</p>
+                              </div>
+                           </div>
+                           <div class="col-md-6">
+                              <div class="client_box">
+                                 <div class="left_main">
+                                    <div class="image_6"><img src="images/user.png"></div>
+                                 </div>
+                                 <div class="right_main">
+                                    <h6 class="magna_text">Magna</h6>
+                                    <p class="consectetur_text">Consectetur adipiscing</p>
+                                    <div class="quote_icon"></div>
+                                 </div>
+                                 <p class="ipsum_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrudLorem ipsum</p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div> -->
+            </div>
+         </div>
+      </div>
+      <!--client section end -->
+      <!--footer section start -->
+      <div class="footer_section layout_padding">
+         <div class="container">
+            <div class="address_main">
+               <div class="address_text"><a href="https://goo.gl/maps/EJazsgbtheuhMWfw6"><img src="images/map-icon.png"><span class="padding_left_15">Head Office</span></a></div>
+               <div class="address_text"><a href="tel:+918289999911"><img src="images/call-icon.png"><span class="padding_left_15">+91 828 9999 911</span></a></div>
+               <div class="address_text"><a href="mailto:info@deebil.com"><img src="images/mail-icon.png"><span class="padding_left_15">info@deebil.com</span></a></div>
+            </div>
+            <div class="footer_section_2">
+               <div class="row">
+                  <div class="col-lg-3 col-sm-6">
+                     <h4 class="link_text">Useful link</h4>
+                     <div class="footer_menu">
+                        <ul>
+                           <li><a href="policy.html">Privacy and Refund Policy</a></li>
+                           <li><a href="terms.html">Terms & Conditions</a></li>
+                        </ul>
+                     </div>
+                  </div>
+                  <!-- <div class="col-lg-3 col-sm-6">
+                     <h4 class="link_text">web design</h4>
+                     <p class="footer_text">Lorem ipsum dolor sit amet, consectetur adipiscinaliquaL oreadipiscing </p>
+                  </div> -->
+                  <!-- <div class="col-lg-3 col-sm-6">
+                     <h4 class="link_text">social media</h4>
+                     <div class="social_icon">
+                        <ul>
+                           <li><a href="#"><img src="images/fb-icon.png"></a></li>
+                           <li><a href="#"><img src="images/twitter-icon.png"></a></li>
+                           <li><a href="#"><img src="images/linkedin-icon.png"></a></li>
+                           <li><a href="#"><img src="images/youtub-icon.png"></a></li>
+                        </ul>
+                     </div>
+                  </div> -->
+                  <div class="col-lg-3 col-sm-6">
+                     <h4 class="link_text">Contact Us</h4>
+                     <p class="footer_text_1">911, Majid Plaza, Kanyakulangara, Trivandrum, Kerala, India - 695 615 </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!--client section end -->
+      <!--copyright section start -->
+      <div class="copyright_section">
+         <div class="container">
+            <p class="copyright_text">Copyright 2023 All Right Reserved By Deebil | GSTIN : 32BVBPA1494F1Z5</p>
+         </div>
+      </div>
+      
+      <!--copyright section end -->
+      <!-- Javascript files-->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <script src="js/plugin.js"></script>
+      <!-- sidebar -->
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
+      <!-- javascript --> 
+      <script src="js/owl.carousel.js"></script>
+      <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script> 
+      <script type="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2//2.0.0-beta.2.4/owl.carousel.min.js"></script>
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+      <script src="../../assets/js/vendor/popper.min.js"></script>
+      <script src="../../dist/js/bootstrap.min.js"></script>
+      <script src="https://kit.fontawesome.com/your-font-awesome-kit.js"></script>
+      <!-- <script src="script.js"></script> -->
+   </body>
 </html>
